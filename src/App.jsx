@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import Counter from './components/Counter';
 import counter from './reducers/counter';
-import { incrementCount, decrementCount } from './actions/counter';
+import { incrementCount, decrementCount, doubleCount } from './actions/counter';
 
 const store = createStore(counter);
 
@@ -15,6 +15,7 @@ const render = () => {
         value={store.getState()}
         onClickIncrement={() => store.dispatch(incrementCount)}
         onClickDecrement={() => store.dispatch(decrementCount)}
+        onClickDouble={() => store.dispatch(doubleCount)}
       />
     </Provider>,
     document.getElementById('root')

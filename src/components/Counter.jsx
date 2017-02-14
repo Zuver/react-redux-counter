@@ -7,6 +7,7 @@ function Counter(props) {
     <div>
       <button onClick={props.onClickDecrement}>-</button>
       <button onClick={props.onClickIncrement}>+</button>
+      <button onClick={props.onClickDouble}>Double</button>
       <br />
       <br />
       <div>{props.value}</div>
@@ -20,6 +21,7 @@ Counter.propTypes = {
   value: React.PropTypes.number.isRequired,
   onClickIncrement: React.PropTypes.func.isRequired,
   onClickDecrement: React.PropTypes.func.isRequired,
+  onClickDouble: React.PropTypes.func.isRequired,
 };
 
 // Export the Counter function

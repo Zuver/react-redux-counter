@@ -1,5 +1,5 @@
 import Immutable from 'immutable';
-import { INCREMENT_COUNT, DECREMENT_COUNT } from '../actions/counter';
+import { INCREMENT_COUNT, DECREMENT_COUNT, DOUBLE_COUNT } from '../actions/counter';
 
 const counter = (state = Immutable.fromJS(0), action) => {
   switch (action.type) {
@@ -7,6 +7,8 @@ const counter = (state = Immutable.fromJS(0), action) => {
       return state + 1;
     case DECREMENT_COUNT:
       return state - 1;
+    case DOUBLE_COUNT:
+      return state * 2;
     default:
       return state;
   }
