@@ -9,7 +9,7 @@ const javaScriptModuleTemplate = {
 module.exports = {
   entry: [
     'webpack/hot/dev-server',
-    './src/App.jsx',
+    './src/index.jsx',
   ],
   output: {
     path: './public',

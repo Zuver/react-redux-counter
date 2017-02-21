@@ -10,7 +10,7 @@ function Counter(props) {
       <button onClick={props.onClickDouble}>Double</button>
       <br />
       <br />
-      <div>{props.value}</div>
+      <div>{props.counter}</div>
     </div>
   );
 }
@@ -18,7 +18,7 @@ function Counter(props) {
 // This object defines the props that the Counter component may use to render and carry out
 // specific behavior
 Counter.propTypes = {
-  value: React.PropTypes.number.isRequired,
+  counter: React.PropTypes.number.isRequired,
   onClickIncrement: React.PropTypes.func.isRequired,
   onClickDecrement: React.PropTypes.func.isRequired,
   onClickDouble: React.PropTypes.func.isRequired,
