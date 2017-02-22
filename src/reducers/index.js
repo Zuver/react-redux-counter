@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux-immutablejs';
 
 // Reducers
-import counter from './counter';
-import form from './form';
+import count from './count';
+import message from './message';
 
 const rootReducer = combineReducers({
-  counter,
-  form,
+  count,
+  message,
 });
 
 export default rootReducer;

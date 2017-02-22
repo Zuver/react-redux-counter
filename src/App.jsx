@@ -1,14 +1,16 @@
-import { connect } from 'react-redux';
+import React from 'react';
 
-import Main from './Main';
+// Component containers
+import Counter from './containers/Counter';
+import Messenger from './containers/Messenger';
 
-function mapStateToProps(state) {
-  return {
-    counter: state.get('counter'),
-    form: state.get('form'),
-  };
-}
-
-const App = connect(mapStateToProps)(Main);
+const App = () => (
+  <div>
+    <Counter />
+    <hr />
+    <Messenger />
+    <hr />
+  </div>
+);
 
 export default App;

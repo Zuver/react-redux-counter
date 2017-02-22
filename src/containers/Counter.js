@@ -3,7 +3,7 @@ import { incrementCount, decrementCount, doubleCount } from '../actions/counter'
 import Counter from '../components/Counter';
 
 const mapStateToProps = state => ({
-  counter: state.get('counter'),
+  count: state.get('count'),
 });
 
 const mapDispatchToProps = dispatch => ({

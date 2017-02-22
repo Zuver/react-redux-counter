@@ -1,16 +1,19 @@
 import React from 'react';
 
-// This function describes only how to render the Counter component. It contains no explicit
-// definition of button-click behavior, but these behaviors may be injected via the props.
+// This component is an example of a "dumb component". It contains no behavior implementation.
+// This component only defines how to render something.
+// All behaviors are passed to this component via the props.
 function Counter(props) {
   return (
     <div>
+      Counter
+      <br />
       <button onClick={props.onClickDecrement}>-</button>
       <button onClick={props.onClickIncrement}>+</button>
       <button onClick={props.onClickDouble}>Double</button>
       <br />
       <br />
-      <div>{props.counter}</div>
+      <div>{props.count}</div>
     </div>
   );
 }
@@ -18,7 +21,7 @@ function Counter(props) {
 // This object defines the props that the Counter component may use to render and carry out
 // specific behavior
 Counter.propTypes = {
-  counter: React.PropTypes.number.isRequired,
+  count: React.PropTypes.number.isRequired,
   onClickIncrement: React.PropTypes.func.isRequired,
   onClickDecrement: React.PropTypes.func.isRequired,
   onClickDouble: React.PropTypes.func.isRequired,

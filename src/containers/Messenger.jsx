@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { submit } from '../actions/form';
+import { submit } from '../actions/messenger';
 
 const Form = ({ value, onClickSubmit }) => {
   let input;
 
   return (
     <div>
+      Send a message to the Redux store
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -41,7 +42,7 @@ Form.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    value: state.get('form'),
+    value: state.get('message'),
   };
 }
 
