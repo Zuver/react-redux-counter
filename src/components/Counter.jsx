@@ -4,6 +4,8 @@ import React from 'react';
 // This component only defines how to render something.
 // All behaviors are passed to this component via the props.
 function Counter(props) {
+  console.log('5. Counter component is being rendered'); // eslint-disable-line
+
   return (
     <div>
       Counter

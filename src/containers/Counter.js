@@ -8,13 +8,16 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onClickIncrement: () => {
-    dispatch(incrementCount);
+    console.log('1. + button was clicked'); // eslint-disable-line
+    dispatch(incrementCount());
   },
   onClickDecrement: () => {
-    dispatch(decrementCount);
+    console.log('1. - button was clicked'); // eslint-disable-line
+    dispatch(decrementCount());
   },
   onClickDouble: () => {
-    dispatch(doubleCount);
+    console.log('1. Double button was clicked'); // eslint-disable-line
+    dispatch(doubleCount());
   },
 });
 

@@ -2,7 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { submit } from '../actions/messenger';
 
-const Form = ({ value, onClickSubmit }) => {
+const Form = ({ message, onClickSubmit }) => {
+  console.log('5. Messenger component is being rendered'); // eslint-disable-line
+
   let input;
 
   return (
@@ -14,6 +16,7 @@ const Form = ({ value, onClickSubmit }) => {
           if (!input.value.trim()) {
             return;
           }
+          console.log('1. Submit button was clicked'); // eslint-disable-line
           onClickSubmit(input.value);
           input.value = '';
         }}
@@ -29,20 +32,20 @@ const Form = ({ value, onClickSubmit }) => {
       </form>
       <br />
       <div>
-        {value}
+        {message}
       </div>
     </div>
   );
 };
 
 Form.propTypes = {
-  value: React.PropTypes.string.isRequired,
+  message: React.PropTypes.string.isRequired,
   onClickSubmit: React.PropTypes.func.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    value: state.get('message'),
+    message: state.get('message'),
   };
 }
 
