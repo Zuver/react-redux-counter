@@ -10,7 +10,7 @@ const count = (state = Immutable.fromJS(0), action) => {
     case DECREMENT_COUNT:
       return state - 1;
     case DOUBLE_COUNT:
-      return state * 6;
+      return state * 2;
     default:
       return state;
   }
